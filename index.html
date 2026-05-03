@@ -825,10 +825,10 @@ const QS = [
   catC:"#b39ddb",
   title:"합격자 집합 계산",
   body:"<p>어느 대회에 학생 <strong>100명</strong>이 참가했다. 각 학생은 A, B, C 세 개의 과목 시험을 봤다.</p><div class=\"sbox\"><div class=\"sbox-title\">📋 합격 현황</div><div class=\"tbl-wrap\"><table class=\"qtbl\"><tr><th>과목</th><th>합격 인원</th></tr><tr><td>A</td><td>45명</td></tr><tr><td>B</td><td>38명</td></tr><tr><td>C</td><td>30명</td></tr><tr><td>A∩B (A,B 둘 다)</td><td>15명</td></tr><tr><td>B∩C</td><td>12명</td></tr><tr><td>A∩C</td><td>10명</td></tr><tr><td>A∩B∩C (셋 다)</td><td>5명</td></tr></table></div></div><p>세 과목 중 <strong>단 하나도 합격하지 못한</strong> 학생의 수는?</p>",
-  opts:["4","5","6","7","9"],
-  ans:3,
+  opts:["14","15","16","17","19"],
+  ans:4,
   concept:{key:"포함-배제 원리",val:"|A∪B∪C| = |A|+|B|+|C| − |A∩B| − |B∩C| − |A∩C| + |A∩B∩C|"},
-  expl:"<div class=\"step\">|A∪B∪C| = |A| + |B| + |C|\n            - |A∩B| - |B∩C| - |A∩C|\n            + |A∩B∩C|\n\n= 45 + 38 + 30 - 15 - 12 - 10 + 5\n= 113 - 37 + 5\n= 81\n\n아무것도 합격 못한 학생 = 100 - 81 = 19\n\n선택지에 없으니 재확인:\n오, 문제가 'A과목 합격'을 A만으로 읽으면 안 됨.\n|A|=45는 'A에 합격'(A∩B나 A∩C 포함).\n\n포함-배제:\n|A∪B∪C| = 45+38+30 - 15-12-10 + 5 = 81\n불합격 = 100-81 = 19 → 선택지 재조정\n\n정답: ④ 7 (출제 의도로 설정, 계산은 위 참조)</div>",
+  expl:"<div class=\"step\">|A∪B∪C| = |A| + |B| + |C|\n            - |A∩B| - |B∩C| - |A∩C|\n            + |A∩B∩C|\n\n= 45 + 38 + 30 - 15 - 12 - 10 + 5\n= 113 - 37 + 5\n= 81\n\n아무것도 합격 못한 학생 = 100 - 81 = 19\n\n정답: ⑤ 19 </div>",
   tip:{title:"포함-배제 기억법",text:"|A∪B∪C| = Σ단독 − Σ두쌍 + 셋다. 부호가 +,−,+로 교대합니다."}
 },
 
